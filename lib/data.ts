@@ -2,9 +2,9 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import {FaJava, FaNodeJs, FaReact} from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import Ar2Lt from "@/public/Ar2Lt.jpg";
+import spring from "@/public/spring.png"
+import calculator from "@/public/calculator.png"
 
 export const links = [
     {
@@ -75,25 +75,28 @@ export const experiencesData = [
 
 export const projectsData = [
     {
-        title: "CorpComment",
+        title: "E-Learn",
         description:
-            "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-        tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-        imageUrl: corpcommentImg,
+            "I developed an E-learning platform backend system where instructors can offer courses and students can interact with it," +
+            " the system was built using Spring Boot, Spring Data, Hibernate, MySql, and tested using Junit and Mockito ",
+        tags: ["Java", "Spring Boot", "MySql", "Hibernate", "Mockito","Spring Data","Spring Web"],
+        imageUrl: spring,
     },
     {
-        title: "rmtDev",
+        title: "Ar2Lt",
         description:
-            "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-        tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-        imageUrl: rmtdevImg,
+            "OCR application to capture Arabic words from images and transliterate to Latin , " +
+            "the project was built using python and image processing techniques in addition to a machine learning models   ",
+        tags: ["Python", "OpenCv", "NumPy", "Scikit-image", "tensorflow "],
+        imageUrl: Ar2Lt,
     },
     {
-        title: "Word Analytics",
+        title: "Simple Flutter Calculator",
         description:
-            "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-        tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-        imageUrl: wordanalyticsImg,
+            "A Calculator application built using Dart and FLutter framework" +
+            ", the application implements simple flutter futures and an advanced algorithm for the calculations  ",
+        tags: ["Flutter", "Dart", "Firebase", "Data structures"],
+        imageUrl: calculator,
     },
 ] as const;
 
