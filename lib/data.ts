@@ -1,6 +1,6 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import {FaJava, FaNodeJs, FaReact} from "react-icons/fa";
+import {FaJava, FaNodeJs} from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import Ar2Lt from "@/public/Ar2Lt.jpg";
 import spring from "@/public/spring.png"
@@ -31,10 +31,10 @@ export const links = [
         name: "Contact",
         hash: "#contact",
     },
-    {
-        name: "العربية",
-        hash: "#arabic"
-    }
+    // {
+    //     name: "العربية",
+    //     hash: "#arabic"
+    // }
 ] as const;
 
 export const experiencesData = [
