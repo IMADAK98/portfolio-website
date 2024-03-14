@@ -1,0 +1,10 @@
+{
+  "Intro" : {
+    "hello": "Hello,I'm Imad",
+    "title" : "Full Stack Engineer",
+    "passion": "with a passion for software engineering",
+    "build": "site and applications",
+    "focus": "Spring boot , Node.js , Next,js"
+
+  }
+}

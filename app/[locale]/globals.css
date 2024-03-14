@@ -14,3 +14,11 @@ html.dark{
     @apply border border-black/10;
 }
 
+
+html.ar{
+    text-align: right;
+}
+
+html.en{
+    text-align: left;
+}

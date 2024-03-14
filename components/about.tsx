@@ -19,7 +19,7 @@ export default function About(){
             id="about"
         >
             <SectionHeading>About me</SectionHeading>
-            <p className={"mb-3"}>
+            <p  className={"mb-3 "}>
                 After graduating with a degree in {" "}
                 <span className="font-medium">Computer Engineering</span>,  I've always approached the world from an abstract perspective
                 <span className={"font-medium"}>  focusing on the bigger picture. </span> This led me to pursue internships in both hardware and software domains.

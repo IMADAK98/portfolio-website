@@ -1,13 +1,15 @@
 "use client";
-import React from 'react'
+import React, {useState} from 'react'
 import {motion} from "framer-motion";
 import {links} from "@/lib/data";
 import Link from "next/link";
 import clsx from "clsx";
 import {useActiveSectionContext} from "@/context/active-section-context-provider";
 
+
 export default function Header(){
     const {activeSection,setActiveSection,timeOfLastClick,setTimeOfLastClick} =useActiveSectionContext();
+
 
     return(
         <header className="z-[999] relative ">
@@ -69,6 +71,7 @@ export default function Header(){
                                 </Link>
                         </motion.li>
                     ))}
+
                 </ul>
             </nav>
         </header>

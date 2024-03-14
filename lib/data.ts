@@ -31,10 +31,15 @@ export const links = [
         name: "Contact",
         hash: "#contact",
     },
-    // {
-    //     name: "العربية",
-    //     hash: "#arabic"
-    // }
+    {
+        name: "العربية",
+        hash: "/ar"
+    },
+    {
+        name: "English",
+        hash: "/en"
+    },
+
 ] as const;
 
 export const experiencesData = [

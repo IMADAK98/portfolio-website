@@ -1,5 +1,5 @@
 "use client"
-import React, {useEffect} from 'react'
+import React  from 'react'
 import Image from "next/image";
 import {motion} from "framer-motion";
 import Link from "next/link";
@@ -8,12 +8,20 @@ import {HiDownload} from "react-icons/hi";
 import ImadsPicImg  from "@/public/ImadsPic.jpg"
 import {useSectionInView} from "@/lib/hooks";
 import {useActiveSectionContext} from "@/context/active-section-context-provider";
+import {useLanguage} from "@/context/language-context";
+import {useTranslations} from 'next-intl';
+import {usePathname} from "next/navigation";
 
-export default function Intro(){
+interface IntroProps {
+    messages: Record<string, string>;
+}
+
+export default function Intro({messages}:IntroProps){
 
    const {ref} =useSectionInView("Home",0.5);
    const {setTimeOfLastClick ,setActiveSection }=useActiveSectionContext();
-
+   const {language,toggleLanguage} = useLanguage();
+   const pathname = usePathname();
 
 
     return(
@@ -51,16 +59,30 @@ export default function Intro(){
                 </div>
             </div>
 
-            <motion.h1
-                className={"mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"}
+            <motion.h1 dir={pathname.includes("/ar")? "rtl" : "ltr"}
+                className={`mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl ${language === 'en' ? 'en' : 'ar'}} `}
                 initial={{opacity:0,y:100}}
                 animate={{opacity:10,y:0}}
             >
-                <span className="font-bold">{`Hello, I'm Imad.`}</span> I'm a{" "}
-                <span className="font-bold">Full Stack Engineer</span> with{" "}
-                <span className="font-bold">a passion </span> for software development. I enjoy
-                building <span className="italic">sites & apps</span>. My focus is{" "}
-                <span className="underline">Backend Systems</span>
+                {/*<span className="font-bold">{language==='english' ? `Hello, I'm Imad.`: "اهلا انا عماد" }*/}
+
+
+                {/*</span>*/}
+                {/*<span className="font-bold">{language==='english' ? `Hello, I'm Imad.`: "اهلا انا عماد" }*/}
+                <span className="font-semibold  ">{messages.hello}</span>
+                {""}
+                <span className="font-bold ">{messages.title}</span>
+                <span className="font-bold ">{messages.passion}</span>
+                {""}
+                <span className="font-bold ">{messages.build}</span>
+                <span className="font-bold">{messages.focus}</span>
+
+
+                {/*I'm a{" "}*/}
+                {/*<span className="font-bold">Full Stack Engineer</span> with{" "}*/}
+                {/*<span className="font-bold">a passion </span> for software development. I enjoy*/}
+                {/*building <span className="italic">sites & apps</span>. My focus is{" "}*/}
+                {/*<span className="underline">Backend Systems</span>*/}
             </motion.h1>
 
             <motion.div

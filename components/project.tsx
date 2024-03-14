@@ -28,9 +28,10 @@ export default function Project({title, description, tags, imageUrl}: ProjectPro
 
             <section
 
-                className=" bg-gray-100 max-w-[42rem] border border-black/5 overflow-hidden sm:pr-8 relative sm:h-[20rem]
+                className=" bg-gray-100 max-w-[42rem] border border-black/5 overflow-hidden sm:pr-8 relative  sm:h-[20rem]
                  mb-3 sm:mb-8 last:mb-0  hover:bg-gray-200 transition sm:group-even:pl-8
                  rounded-lg dark:bg-white/10 dark:hover:bg-white/20 dark:text-white
+                 flex justify-start
                  "
 
             >
