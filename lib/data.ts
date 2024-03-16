@@ -8,36 +8,68 @@ import calculator from "@/public/calculator.png"
 
 export const links = [
     {
+        id:1,
         name: "Home",
         hash: "#home",
     },
     {
+        id:2,
         name: "About",
         hash: "#about",
     },
     {
+        id:3,
         name: "Projects",
         hash: "#projects",
     },
     {
+        id:4,
         name: "Skills",
         hash: "#skills",
     },
     {
+        id:5,
         name: "Experience",
         hash: "#experience",
     },
     {
+        id:6,
         name: "Contact",
         hash: "#contact",
     },
+
+
+] as const;
+export const links_ar = [
     {
-        name: "العربية",
-        hash: "/ar"
+        id:1,
+        name: "الرئيسية",
+        hash: "#home",
     },
     {
-        name: "English",
-        hash: "/en"
+        id:2,
+        name: "نبذة عني",
+        hash: "#about",
+    },
+    {
+        id:3,
+        name: "مشاريعي",
+        hash: "#projects",
+    },
+    {
+        id:4,
+        name: "مهاراتي",
+        hash: "#skills",
+    },
+    {
+        id:5,
+        name: "خبراتي",
+        hash: "#experience",
+    },
+    {
+        id:6,
+        name: "التواصل",
+        hash: "#contact",
     },
 
 ] as const;
@@ -78,6 +110,44 @@ export const experiencesData = [
     },
 ] as const;
 
+export const experiencesData_ar = [
+    {
+        title: " مطور جافا متدرب",
+        location: "السعودية ,الرياض",
+        description:
+            "اكملت تدريبي في شركة داتا سيرف حيث عملت كمطور جافا ",
+        icon: React.createElement(FaJava),
+        date: "May 2023 - June 2023",
+    },
+    {
+        title: "مهندس شبكات متدرب",
+        location: "السعودية,الرياض",
+        description:
+            "اكملت تدريبي الثاني في شركة أسس حيث عملت كمهندس شبكات مسؤول عن خدمات ماقبل المبيعات ومراقب ميداني",
+        icon: React.createElement(CgWorkAlt),
+        date: "June 2023 - October 2023",
+    },
+
+    {
+        title: "تخرجت من الجامعة",
+        location: "تركيا, اسطنبول",
+        description:
+            " تخرجت من الجامعة بشهادة البكالوريس في هندسة الكمبيوتر",
+        icon: React.createElement(LuGraduationCap),
+        date: "2023",
+    },
+    {
+        title: "مهندس برمجيات",
+        location: "تركيا, اسطنبول",
+        description:
+            "عملت في اسطنبول حيث كنت مسؤول عن تطوير المواقع  ",
+        icon: React.createElement(FaNodeJs),
+        date: "Nov 2023 - Feb 2024",
+    },
+] as const;
+
+
+
 export const projectsData = [
     {
         title: "E-Learn",
@@ -100,6 +170,30 @@ export const projectsData = [
         description:
             "A Calculator application built using Dart and FLutter framework" +
             ", the application implements simple flutter futures and an advanced algorithm for the calculations  ",
+        tags: ["Flutter", "Dart", "Firebase", "Data structures"],
+        imageUrl: calculator,
+    },
+] as const;
+
+export const projectsData_ar = [
+    {
+        title: "E-Learn",
+        description:
+            "نظام اساسي لمنصة تعليم الكتروني حيث يمكن للطلاب التفاعل مع المدرسين واخذ مواد مختلفة تم بناء النظام باستخدام تقنيات متنوعة",
+        tags: ["Java", "Spring Boot", "MySql", "Hibernate", "Mockito","Spring Data","Spring Web"],
+        imageUrl: spring,
+    },
+    {
+        title: "Ar2Lt",
+        description:
+            "تطبيق لمعالجة الصور التي تحتوي كلمات باللغة العربية وتحويلها الى نص لاتيني مكتوب باستخدام تقنيات معالجة الصور و نظم التعرف على الانماط وتعليم الآلة ",
+        tags: ["Python", "OpenCv", "NumPy", "Scikit-image", "tensorflow "],
+        imageUrl: Ar2Lt,
+    },
+    {
+        title: "Simple Flutter Calculator",
+        description:
+            " تطبيق حاسبة مبني للجوال , تم تطوير الخواريزمات للحساب باستخدام نظم البيانات والخوارزميات المتقدمة",
         tags: ["Flutter", "Dart", "Firebase", "Data structures"],
         imageUrl: calculator,
     },

@@ -1,16 +1,27 @@
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl";
 
-const useIntroMessages = () => {
-    const t = useTranslations();
+export const useIntroMessages = () => {
+  const t = useTranslations("Intro");
 
-    return {
-        hello: t('Intro.hello'),
-        title: t('Intro.title'),
-        passion:t('Intro.passion'),
-        build: t('Intro.build'),
-        focus: t('Intro.focus')
-        // Add more messages as needed
-    };
+  return {
+    hello: t("hello"),
+    title: t("title"),
+    passion: t("passion"),
+    build: t("build"),
+    focus: t("focus"),
+    // background: t("Intro.background"),
+    // Add more messages as needed
+  };
 };
 
-export default useIntroMessages;
+export const useAboutmeMessages = () => {
+  const t = useTranslations("About");
+
+  return {
+    background: t("background"),
+    skills: t("skills"),
+    mindset: t("mindset"),
+    interests: t("interests"),
+    carrer: t("career"),
+  };
+};
