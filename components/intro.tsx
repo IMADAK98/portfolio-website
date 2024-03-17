@@ -8,14 +8,12 @@ import { HiDownload } from "react-icons/hi";
 import ImadsPicImg from "@/public/ImadsPic.jpg";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context-provider";
-import { useLanguage } from "@/context/language-context";
-import { useLocale, useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 import { IntroProps } from "@/lib/types";
 
 export default function Intro({ messages }: IntroProps) {
   const { ref } = useSectionInView(1, 0.5);
   const { setTimeOfLastClick, setActiveSection } = useActiveSectionContext();
-  const { language, toggleLanguage } = useLanguage();
   const locale = useLocale();
 
   return (
@@ -61,24 +59,19 @@ export default function Intro({ messages }: IntroProps) {
       </div>
 
       <motion.h1
-        className={`mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl ${
-          language === "en" ? "en" : "ar"
-        }} `}
+        className={`mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl `}
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 10, y: 0 }}
       >
         {/*<span className="font-bold">{language==='english' ? `Hello, I'm Imad.`: "اهلا انا عماد" }*/}
-
         {/*</span>*/}
         {/*<span className="font-bold">{language==='english' ? `Hello, I'm Imad.`: "اهلا انا عماد" }*/}
-        <span className="font-semibold">{messages.hello}</span>
-        {""}
+        <span className="font-normal">{messages.hello}</span>{" "}
         <span className="font-bold ">{messages.title}</span>
-        <span className="font-bold ">{messages.passion}</span>
         {""}
+        <span className="font-bold ">{messages.passion}</span>
         <span className="font-bold ">{messages.build}</span>
-        <span className="font-bold">{messages.focus}</span>
-
+        <span className="font-bold underline">{messages.focus}</span>
         {/*I'm a{" "}*/}
         {/*<span className="font-bold">Full Stack Engineer</span> with{" "}*/}
         {/*<span className="font-bold">a passion </span> for software development. I enjoy*/}

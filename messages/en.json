@@ -1,10 +1,10 @@
 {
   "Intro": {
-    "hello": "Hello,I'm Imad",
-    "title": "Full Stack Engineer",
-    "passion": "with a passion for software engineering",
-    "build": "site and applications",
-    "focus": "Spring boot , Node.js , Next,js"
+    "hello": "Hello,I'm Imad, I'm a ",
+    "title": "Full Stack Engineer ",
+    "passion": " with a passion for software engineering ",
+    "build": " i enjoy building sites and applications using ",
+    "focus": " Spring boot , Node.js , Next,js"
   },
 
   "About": {

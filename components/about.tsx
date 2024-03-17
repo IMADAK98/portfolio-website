@@ -27,11 +27,11 @@ export default function About({ messages }: IntroProps) {
         {locale === "en" ? "About me" : "نبذة عني"}{" "}
       </SectionHeading>
       <p className={"mb-3"}>
-        <span className={"font-medium"}>{messages.background}</span>
-        <span className="font-normal">{messages.skills} </span>
+        <span className={"font-normal"}>{messages.background}</span>
+        <span className="font-semibold">{messages.skills} </span>
         <span className="italic underline">{messages.mindset}</span>{" "}
-        <span className="font-medium">{messages.interests} </span>
-        <span className="font-extrabold">{messages.carrer} </span>
+        <span className="font-medium italic">{messages.interests} </span>
+        <span className="font-extrabold font-serif">{messages.carrer} </span>
       </p>
     </motion.section>
   );

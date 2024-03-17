@@ -7,7 +7,6 @@ import { Toaster } from "react-hot-toast";
 import Footer from "@/components/footer";
 import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
-import LanguageContextProvider from "@/context/language-context";
 import useTextDirection from "@/actions/useTextDirection";
 import { Locale } from "@/i18nconfig";
 
@@ -51,15 +50,13 @@ export default function RootLayout({
         "
         ></div>
         <ThemeContextProvider>
-          <LanguageContextProvider>
-            <ActiveSectionContextProvider>
-              <Header />
-              {children}
-              <Footer />
-              <Toaster position={"top-right"} />
-              <ThemeSwitch />
-            </ActiveSectionContextProvider>
-          </LanguageContextProvider>
+          <ActiveSectionContextProvider>
+            <Header />
+            {children}
+            <Footer />
+            <Toaster position={"top-right"} />
+            <ThemeSwitch />
+          </ActiveSectionContextProvider>
         </ThemeContextProvider>
       </body>
     </html>
