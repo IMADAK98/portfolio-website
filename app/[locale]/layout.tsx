@@ -35,7 +35,7 @@ export default function RootLayout({
       dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90
       `}
       >
-        <div
+        {/* <div
           className="bg-[#fbe2e3] absolute top-[-6rem] -z-10 right-[11rem]
          h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]
          dark:bg-[#946263]
@@ -48,7 +48,7 @@ export default function RootLayout({
        md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]
         dark:bg-[#676394]
         "
-        ></div>
+        ></div> */}
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
             <Header />
